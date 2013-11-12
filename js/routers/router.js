@@ -1,15 +1,13 @@
-var app = app || {};
+define(['backbone', 'common', 'collections/todos'],
+function(Backbone, Common, Todos) {
+	return Backbone.Router.extend({
+		routes: {
+			"*filter": "setFilter"
+		},
 
-var Workspace = Backbone.Router.extend({
-	routes: {
-		"*filter": "setFilter"
-	},
-
-	setFilter: function(param) {
-		app.TodoFilter = param || "";
-		app.Todos.trigger("filter");
-	}
+		setFilter: function(param) {
+			Common.TodoFilter = param || "";
+			Todos.trigger("filter");
+		}
+	});
 });
-
-app.TodoRouter = new Workspace();
-Backbone.history.start();

@@ -10,7 +10,7 @@ require.config({
 			],
 			exports: 'Backbone'
 		},
-		backboneLocalstorage: {
+		backboneLocalStorage: {
 			deps: ['backbone'],
 			exports: 'Store'
 		}
@@ -19,7 +19,7 @@ require.config({
 		jquery: '../bower_components/jquery/jquery',
 		underscore: '../bower_components/underscore/underscore',
 		backbone: '../bower_components/backbone/backbone',
-		backboneLocalstorage: '../bower_components/backbone.localStorage/backbone.localStorage',
+		backboneLocalStorage: '../bower_components/backbone.localStorage/backbone.localStorage',
 		text: '../bower_components/requirejs-text/text'
 	}
 });

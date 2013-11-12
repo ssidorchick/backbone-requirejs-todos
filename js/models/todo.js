@@ -1,14 +1,15 @@
-var app = app || {};
+define(['backbone'],
+function(Backbone) {
+	return Backbone.Model.extend({
+		defaults: {
+			title: "",
+			completed: false
+		},
 
-app.Todo = Backbone.Model.extend({
-	defaults: {
-		title: "",
-		completed: false
-	},
-
-	toggle: function() {
-		this.save({
-			completed: !this.get("completed")
-		});
-	}
+		toggle: function() {
+			this.save({
+				completed: !this.get("completed")
+			});
+		}
+	});
 });
